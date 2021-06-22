@@ -1,5 +1,9 @@
 <template>
-    <div class="uk-container uk-container-expand uk-light uk-height-viewport" style="background: #0b0e0f">
+    <div
+        class="uk-container uk-container-expand uk-height-viewport"
+        :style="[{ background: backgroundColor, colour: foregroundColor }]"
+        :class="{ 'uk-light': darkMode }"
+    >
         <Navigation />
         <router-view />
 
@@ -26,10 +30,6 @@ export default {
 </script>
 
 <style>
-#app {
-    background: #0b0e0f;
-}
-
 ::-webkit-scrollbar {
     background-color: #15191a;
     color: #c5bcae;
